@@ -13,12 +13,13 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
+    console.log(req.query)
     res.render('home', {layout: "templates/layout"})
 })
 
 app.post('/form', function (req, res){
     console.log(req.body)
-    res.status(200)
+    res.status(200).send('form submitted')
 })
 
 app.get('/form', function(req, res) {
