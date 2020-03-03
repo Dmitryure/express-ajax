@@ -10,4 +10,8 @@ app.get('/', function (req, res) {
     res.render('home', {layout: "templates/layout"})
 })
 
+app.get('/users', function (req, res) {
+    res.render('users', {layout: 'templates/layout'})
+})
+
 app.listen(3000, () => console.log("listening on 3000"))
